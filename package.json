@@ -1,0 +1,29 @@
+{
+  "name": "hackathon",
+  "version": "1.0.0",
+  "description": "auth-hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/giannishorgos/auth-hackathon.git"
+  },
+  "keywords": [
+    "hackathon",
+    "testing",
+    "ci",
+    "cd",
+    "cypress"
+  ],
+  "author": "Ioannis Horgos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giannishorgos/auth-hackathon/issues"
+  },
+  "homepage": "https://github.com/giannishorgos/auth-hackathon#readme",
+  "devDependencies": {
+    "cypress": "^13.6.1"
+  }
+}
