@@ -37,13 +37,13 @@ describe("Add Products in the Cart", () => {
             cy.wrap($product.find('.product-action > button')).click()
             cy.wrap($product.find('.product-action > button')).should('have.text', '✔ ADDED')
 
-            let product_price = quantity * price
+            // let product_price = quantity * price
 
         })
     })
 
     it('Total Items and Price', () => {
-        cy.get('.cart-info > table > tbody > tr').each($tr => {
+        cy.get('.cart-info table tbody tr').each($tr => {
             const tds = $tr.find('td')
 
             if (tds.eq(0).text().includes('Items')) {
