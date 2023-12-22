@@ -20,8 +20,16 @@ describe('Promo Code Redemption', () => {
         // assert the search field contains rice
         cy.get('#search-field ').should('have.value', 'rice')
 
+    })
+
+    it('If page size is 5, the user should see 5 deals', () => {
         // Assert if page size is visible
-        cy.get('#page-menu ').should('be.visible')
+        cy.get('#page-menu').then(($select) => {
+            const selectedValue = $select.val()
+          
+            // Assert that the number of items is equal to the selected value
+            // Assert that there are 5 rows in the table
+            cy.get('table.table.table-bordered tbody tr').should('have.length', 5)
         
         
         })
@@ -29,17 +37,4 @@ describe('Promo Code Redemption', () => {
 
 })
 
-        
-      // Visit the website
- 
-
-        // 
-
-
-
-
-
-
-        // 
-
- // Test 
+})
