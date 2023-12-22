@@ -4,9 +4,9 @@ describe("Search for Products", () => {
     })
 
     it('Tests search should display the corresponding products', () => {
-        cy.get('.search > .search-keyword').type('brocolli')
+        cy.get('.search > .search-form > input').type('brocolli')
 
         cy.get('.products').find('.loadind').should('not.exist')
-        cy.get('.products').find('.product').first().get('.product-name').should('have.value', 'Brocolli - 1 Kg')
+        cy.get('.products').find('.product').first().get('h4.product-name').should('have.text', 'Brocolli - 1 Kg')
     })
 })
