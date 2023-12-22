@@ -6,20 +6,40 @@
 
 */
 describe('Promo Code Redemption', () => {
-    it('should allow the user to see Top Deals', () => {
-      // Visit the website
-        cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/')
-
-        // Search for the button "Top Deals"
-        cy.get('a.cart-header-navlink[href="#/offers"]').should('have.text', 'Top Deals')
-
-        // Click on the button Top Deals
-        cy.get('a.cart-header-navlink[href="#/offers"]').click()
-
-        // assert if there is a table with the list of deals
-        cy.get('table').should('be.visible')
-
-
-
+    beforeEach(() => {
+        cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/offers')
     })
-  })
+
+    it('should allow the user to see Top Deals', () => {
+        // Assert if search field is visible
+        cy.get('#search-field ').should('be.visible')
+
+        // Type rice in the search field
+        cy.get('#search-field ').type('rice')
+
+        // assert the search field contains rice
+        cy.get('#search-field ').should('have.value', 'rice')
+
+        // Assert if page size is visible
+        cy.get('#page-menu ').should('be.visible')
+        
+        
+        })
+
+
+})
+
+        
+      // Visit the website
+ 
+
+        // 
+
+
+
+
+
+
+        // 
+
+ // Test 
